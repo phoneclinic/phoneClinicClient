@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Rajdhani&family=Roboto+Condensed&display=swap');
+
+.Main {
+    height: 150px;
+    width: 200px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: #cbcbcb;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.Main:hover {
+    background-color: #a19e9e;
+    box-shadow: 4px 4px 12px 8px #858282;
+}
+
+.Main h2 {
+    color: #30475E;
+    font-size: 20px;
+}
+
+.Main:hover > h2{
+    color: #ffffff;
+}
+
+.Main:hover > p{
+    color: #f7f4f4;
+}
+
+.Main h2:hover {
+    color: #ffffff;
+}
+
+.Main p {
+    color: #3E3636;
+}
+
+@media (max-width:799px) {
+    .Main {
+        height: 100px;
+        width: 130px;
+    }
+
+    .Main h2 {
+        font-size: 15px;
+    }
+
+    .Main p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:675px) {
+    .Main {
+        height: 95px;
+        width: 95px;
+    }
+}

@@ -1,0 +1,155 @@
+.sidePanelMain {
+    position: relative;
+    height: 75px;
+    width: 100px;
+}
+.sidePanelContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 15px 0 0 15px;
+    padding: 0 5px;
+    background-color: #62a0ec;
+    animation: loginMenuIn 0.5s ease-out forwards;
+}
+
+.sidePanelContainer:hover {
+    animation: loginMenuOut 0.5s ease-out forwards;
+}
+
+@keyframes loginMenuIn {
+    0% {
+        width: 180px;
+    }
+    100% {
+        width: 125px;
+    }
+}
+
+@keyframes loginMenuOut {
+    100% {
+        width: 180px;
+    }
+}
+
+.sidePanelItem {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.sidePanelLink {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.sidePanelLink.sidePanelActive {
+    color: white;
+}
+
+.sidePanelLink:hover > .sidePanelIcon, .sidePanelLink:hover > .sidePanelDetails {
+    color: white;
+}
+
+.sidePanelIcon {
+    color: inherit;
+    font-size: 25px;
+}
+
+.sidePanelDetails {
+    margin: 5px;
+    font-size: 13px;
+    color: inherit;
+}
+
+.displayUserContainer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayUserMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.displayUserImg {
+    font-size: 45px;
+    color: grey;
+}
+
+.displayUserHeaders {
+    display: flex;
+    flex-flow: column;
+}
+
+.displayUserH4 {
+    margin: 1px;
+}
+
+.logOutBtn {
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.logOutBtn:hover {
+    color: #5692e2;
+    transform: scale(1.2);
+    background-color: white;
+}
+
+.googleUserImg {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+@media (max-width: 990px) {
+    .sidePanelMain {
+        width: 100%;
+    }
+    .sidePanelContainer {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        border-radius: unset;
+        animation: unset;
+        background-color: unset;
+    }
+
+    .sidePanelLink {
+        color: gray;
+    }
+
+    .sidePanelLink.sidePanelActive {
+        color: #5692e2;
+    }
+
+    .displayUserDetails {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .displayUserHeaders {
+        flex-flow: row;
+    }
+}

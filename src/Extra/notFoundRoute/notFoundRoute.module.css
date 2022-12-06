@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Rajdhani&family=Roboto+Condensed&display=swap');
+
+.notFoundMain {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #ffaaa7;
+    color: #820000;
+}
+
+.notFoundImage {
+    width: 350px;
+}
+
+.notFoundLink {
+    display: block;
+    text-decoration: none;
+    color: #820000;
+}
+
+.notFoundLink:hover {
+    color: #547de3;
+    transform: scale(1.2);
+}
+
+@media (max-width:520px) {
+    .notFoundImage {
+        width: 90%;
+    }
+}
