@@ -79,7 +79,7 @@ function Login() {
         setUserNotFound(false);
         setPasswordDoestMatch(false);
 
-        fetch('https://phone-clinic-server.onrender.com/login', {
+        fetch('https://phoneclinicserver-q862.onrender.com/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

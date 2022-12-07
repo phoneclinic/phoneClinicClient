@@ -143,7 +143,7 @@ function Registration() {
         setSpinner(true);
         
 
-        fetch('https://phone-clinic-server.onrender.com/register', {
+        fetch('https://phoneclinicserver-q862.onrender.com/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
