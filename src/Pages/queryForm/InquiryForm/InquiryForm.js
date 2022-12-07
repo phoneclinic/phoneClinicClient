@@ -32,8 +32,6 @@ const InquiryForm = () => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
 
-    console.log(params);
-
     useEffect(() => {
         window.scrollTo(0, 0);
         aos.init({duration: 1200});
@@ -48,7 +46,6 @@ const InquiryForm = () => {
         }
     }, [])
 
-    console.log(make, model);
 
     useEffect(() => {
         if (make.length > 0 && model.length > 0 && description.length > 0 && service.length > 0 && name.length > 0 && phone.length > 0){
@@ -115,7 +112,6 @@ const InquiryForm = () => {
     let details = inquiryFormDetails[mainItem]['details'];
     let img = null;
     let formImage = null;
-    console.log(productId)
     
     if (queryId === 'accessories' && deviceId === 'phone') {
         img = <img src={accessories.phone[productId].img} alt="device"/>

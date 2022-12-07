@@ -7,8 +7,6 @@ const RepairItem = (props) => {
 
     const params = useParams();
 
-    console.log(params);
-
     const padding = props.device === 'tablet' ? '10px' : null
 
     return (

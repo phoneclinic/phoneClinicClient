@@ -9,7 +9,6 @@ const RepairConsole = () => {
     const params = useParams();
 
     const phoneRepair = Object.keys(logo[params.deviceId]).map((item, index) => {
-        console.log(item);
         return <RepairItem key={index}
                             img={logo[params.deviceId][item]} 
                             model={item} />

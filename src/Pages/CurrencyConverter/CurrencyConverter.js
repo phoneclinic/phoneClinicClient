@@ -24,7 +24,7 @@ class CurrencyConverter extends Component {
         window.scrollTo(0, 0);
         aos.init({duration: 1300});
 
-        axios.get('https://phoneclinicserver.onrender.com/currencyData')
+        axios.get('https://phoneclinicserver-q862.onrender.com/currencyData')
         .then(res => {
             this.setState({rate: res.data, loader: false})
         }).catch(error => {
@@ -35,7 +35,6 @@ class CurrencyConverter extends Component {
     getResult = (event) => {
         const reg = new RegExp('^[0-9]*$');
         if (reg.test(event.target.value)){
-            // console.log(this.state.inputValue);
             this.setState({inputValue: event.target.value})
         }
         else{
