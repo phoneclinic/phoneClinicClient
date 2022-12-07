@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #161853;
+    background-color: #333334;
     overflow: hidden;
 }
 
@@ -52,7 +52,7 @@
     width: 200px;
     padding: 10px;
     border-radius: 20px;
-    background-color: #7a71a0;
+    background-color: #5d5d60;
     color: #e7eaf1;
     display: flex;
     justify-content: center;
@@ -60,7 +60,7 @@
 }
 
 .repairLink:hover {
-    background-color: #6f659e;
+    background-color: #868688;
     color: #ffffff;
     font-weight: bolder;
     transform: scale(1.1);
@@ -75,7 +75,7 @@
     height: 400px;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #334257;
+    background-color: #333334;
     border-radius: 20px;
 }
 

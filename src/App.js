@@ -66,15 +66,15 @@ const App = () => {
 
             <Route path="laptop" element={<PhoneMain device="laptop" />}/>
 
-            <Route path='repair/:deviceId' element={<MainComponent />}/>
+            <Route path=':queryId/:deviceId' element={<MainComponent />}/>
 
-            <Route path='repair/:deviceId/:itemId' element={<PhoneModels />}/>
+            <Route path=':queryId/:deviceId/:itemId' element={<PhoneModels />}/>
 
-            <Route path=':queryId/:deviceId' element={<PcMain />}/>
+            <Route path=':queryId/:deviceId/:itemId/:model' element={<PcMain />}/>
 
             <Route path=':queryId/:deviceId/:itemId/:model/inquiry' element={<InquiryForm />}/>
 
-            <Route path=':queryId/:deviceId/:itemId/inquiry' element={<InquiryForm />}/>
+            <Route path=':queryId/:deviceId/:itemId/:model/:productId/inquiry' element={<InquiryForm />}/>
 
             <Route path="other_services/currency_converter" element={<CurrencyConverter />}/>
 

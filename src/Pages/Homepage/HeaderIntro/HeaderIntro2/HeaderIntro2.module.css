@@ -1,8 +1,8 @@
 .HeaderIntro2 {
     width: 95%;
-    height: 700px;
     margin: 50px auto;
     padding: 10px;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,13 +14,29 @@
     margin: auto;
     height: 100%;
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
 }
 
+.imgContainer {
+    width: 100%;
+}
+
 .Img {
-    width: 90%;
-    height: 540px
+    width: 70%;
+    height: 200px;
+}
+
+.HeaderIntro2Details {
+    margin: 15px;
+}
+
+.HeaderIntro2Para {
+    margin: 2px;
+    font-weight: 600;
+    color: #3a7ed9;
+    letter-spacing: 1px;
 }
 
 .Para {
@@ -69,66 +85,45 @@
 @media (max-width: 1024px){
     .HeaderIntro2 {
         flex-flow: column;
-        height: 1200px;
     }
 
     .Container {
         width: 100%;
+        flex-flow: row;
     }
 
     .Img {
-        width: 95%;
+        width: 70%;
     }
 
     .Para {
         width: 95%;
         margin: 20px auto;
-        height: 550px;
     }
 }
 
 @media (max-width:699px) {
-    .HeaderIntro2 {
+    /* .HeaderIntro2 {
         height: 1200px;
-    }
+    } */
 
-    .Container {
-        height:500px;
-    }
-
-    .Img {
+    /* .Img {
         height: 480px;
-    }
+    } */
 }
 
-@media (max-width: 500px){
-    .HeaderIntro2 {
-        height:900px;
-    }
-    .Para {
-        height: 100%;
-        margin: 0;
+@media (max-width: 550px){
+    .Img {
+        width: 90%;
     }
 
     .Container {
-        display: none;
+        flex-flow: column;
     }
 }
 
 @media (max-width: 384px){
-    .HeaderIntro2 {
-        height: 980px
+    .Img {
+        width: 100%;
     }
-}
-
-@media (max-width: 300px){
-    .HeaderIntro2 {
-        height: 1030px;
-    }
-
-    .Para {
-        margin: 0;
-        font-size: 15px;
-    }
-    
 }

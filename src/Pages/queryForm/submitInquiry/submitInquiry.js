@@ -8,6 +8,7 @@ function SubmitInquiry(props) {
     useEffect(() => {
         AOS.init();
     }, [])
+
     //repair form
     if (props.type === 'repair'){
         return (
@@ -19,12 +20,14 @@ function SubmitInquiry(props) {
                             <input type="text" required
                                     placeholder={`${props.make}'s make`}
                                     className={styles.Input}
+                                    defaultValue={props.makeValue}
                                     onChange={(event) => props.userInputHandler('make', event)}
                                     />
 
                             <input type="text" required
                                     placeholder={`${props.make}'s Model`}
                                     className={styles.Input}
+                                    defaultValue={props.modelValue}
                                     onChange={(event) => props.userInputHandler('model', event)}
                                     />
                         </div>
@@ -93,12 +96,14 @@ function SubmitInquiry(props) {
                             <input type="text" required
                                     placeholder={`${props.make}'s make`}
                                     className={styles.Input}
+                                    value={props.makeValue}
                                     onChange={(event) => props.userInputHandler('make', event)}
                                     />
 
                             <input type="text" required
                                     placeholder={`${props.make}'s Model`}
                                     className={styles.Input}
+                                    value={props.modelValue}
                                     onChange={(event) => props.userInputHandler('model', event)}
                                     />
                         </div>
@@ -167,12 +172,14 @@ function SubmitInquiry(props) {
                             <input type="text" required
                                     placeholder={`${props.make}'s make`}
                                     className={styles.Input}
+                                    value={props.makeValue}
                                     onChange={(event) => props.userInputHandler('make', event)}
                                     />
 
                             <input type="text" required
                                     placeholder={`${props.make}'s Model`}
                                     className={styles.Input}
+                                    value={props.modelValue}
                                     onChange={(event) => props.userInputHandler('model', event)}
                                     />
                         </div>

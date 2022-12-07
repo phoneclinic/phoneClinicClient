@@ -6,7 +6,7 @@
 
 .Shop {
     width: 90%;
-    margin: 90px auto;
+    margin: 50px auto;
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -16,7 +16,6 @@
 
 .Shop a {
     text-decoration: none;
-    /* margin: 30px 10px; */
     transition: transform .5s;
 }
 

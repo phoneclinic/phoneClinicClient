@@ -34,7 +34,7 @@ const WhyChooseUsMain = () => {
                     <div data-aos='fade-right' className={styles.Container1}>
                         <div className={styles.Para}>
                             <h3>Experienced Expertise</h3>
-                            <p>We are in mobile phone service from more than 12 years.</p>
+                            <p>We are in mobile phone service from more than 9 years.</p>
                         </div>
                         <div className={styles.smile}>
                             <FontAwesomeIcon className={styles.Smile} icon={faSmileBeam} />

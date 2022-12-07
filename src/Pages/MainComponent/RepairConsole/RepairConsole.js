@@ -1,26 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
+import { useParams } from "react-router-dom";
 import RepairItem from "../RepairItem/RepairItem";
 import styles from './RepairConsole.module.css';
+import { logo } from '../../../data/data';
 
+const RepairConsole = () => {
 
+    const params = useParams();
 
+    const phoneRepair = Object.keys(logo[params.deviceId]).map((item, index) => {
+        console.log(item);
+        return <RepairItem key={index}
+                            img={logo[params.deviceId][item]} 
+                            model={item} />
+    })
 
-class RepairConsole extends Component {
-
-    render () {
-        const phoneRepair = Object.keys(this.props.Data).map((item, index) => {
-            return <RepairItem key={index} device={this.props.device}
-                                img={this.props.img[item]} 
-                                model={this.props.device === "laptop" ? this.props.Data[item] : item }
-                                dir={item} />
-        })
-
-        return (
-            <div className={styles.Main}>
-                {phoneRepair}
-            </div>
-        )
-    }
+    return (
+        <div className={styles.Main}>
+            {phoneRepair}
+        </div>
+    )
 }
 
 export default RepairConsole;

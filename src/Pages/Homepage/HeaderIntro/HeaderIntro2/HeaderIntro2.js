@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styles from './HeaderIntro2.module.css';
-import img from '../../../../Assets/Images/others/phoneClinic.jpg';
+import oldKentRoad from '../../../../Assets/Images/others/phoneClinic.jpg';
+import waterloo from '../../../../Assets/Images/others/waterloo.jpg';
 import phone from '../../../../Assets/Images/heading/mobileRepair.png';
 import laptop from '../../../../Assets/Images/heading/laptop.jpeg';
 import gagdet from '../../../../Assets/Images/heading/devices.jpg';
@@ -18,11 +19,25 @@ const HeaderIntro2 = () => {
 
     return (
         <div className={styles.HeaderIntro2}>
-            <div className={styles.Container} data-aos="fade-right" data-aos-once="true">
-                <img className={styles.Img} src={img} alt="HeaderIntro 2"/>
+            <div className={styles.Container}>
+                <div className={styles.imgContainer}>
+                    <img className={styles.Img} src={oldKentRoad} alt="phone clinic"/>
+                    <div className={styles.HeaderIntro2Details}>
+                        <p className={styles.HeaderIntro2Para}>271 Old kent road SE1 5LU</p>
+                        <p className={styles.HeaderIntro2Para}>020 7237 2727 / 07770 070327</p>
+                    </div>
+                </div>
+
+                <div className={styles.imgContainer}>
+                    <img className={styles.Img} src={waterloo} alt="phone clinic"/>
+                    <div className={styles.HeaderIntro2Details}>
+                        <p className={styles.HeaderIntro2Para}>231 Waterloo road SE1 8XH</p>
+                        <p className={styles.HeaderIntro2Para}>020 7928 3728 / 07484 369049</p>
+                    </div>
+                </div>
             </div>
 
-            <div data-aos="fade-left" data-aos-once="true" className={styles.Para}>
+            <div className={styles.Para}>
                 <h2>We Provide The Best Services To Repair Your Gagdet</h2>
                 <p>Phone Clinic serves One of many services you need your everyday life. Our service starts from phone servicing.
                     We provide the best gagdet repairing service in South East London. Our expertises are experinced

@@ -6,7 +6,7 @@ const phoneModel = (props) => {
     return (
         <div className={styles.Main}>
             <h2>{props.device}</h2>
-            <p>View Options </p>
+            <p>Book now</p>
         </div>
     )
 }

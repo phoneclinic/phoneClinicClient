@@ -34,7 +34,7 @@ const AboutUs = () => {
                     
                     <div className={styles.SubPara}>
                         <div className={styles.para}>
-                            <p>Phone Clinic is experts in mobile repairs and have a good exposure on tablets as well. Our experience 
+                            <p>Phone Clinic is experts in mobile tablet and laptop repairs and have a good exposure on tablets as well. Our experience 
                                 with the services we provide in the United Kingdom has been great and the response is overwhelming. 
                                 The location makes a lot of difference in such repairs and the center should have all hi-tech features
                                 to support the service being provided. Phone Clinic is all equipped to take
@@ -62,7 +62,7 @@ const AboutUs = () => {
                 <h3>At Phone Clinic You will get the following Services</h3>
                 <div className={styles.Services}>
                     <div className={styles.service} alt="Phone">
-                        <img src={phone}/>
+                        <img src={phone} alt="phone clinic"/>
                         <div className={styles.details}>
                             <h2>Phone Repair</h2>
                             <p>We repair Phone of All different kinds of Make and Model</p>

@@ -28,10 +28,9 @@ import btSpeaker from '../Assets/Images/tablet/accessories/speaker.png';
 import stand from '../Assets/Images/tablet/accessories/stand.png';
 
 //Pc Images
-import Keyboard from '../Assets/Images/Accessories/pcAccesories/keyboard.png';
 import monitor from '../Assets/Images/Accessories/pcAccesories/monitor.png';
 import mouse from '../Assets/Images/Accessories/pcAccesories/mouse.png';
-import utilities from '../Assets/Images/Accessories/pcAccesories/utilities.png';
+import laptopCharger from '../Assets/Images/Accessories/pcAccesories/charger.png'
 import ram from '../Assets/Images/Accessories/pcAccesories/ram.png';
 import speaker from '../Assets/Images/Accessories/pcAccesories/speaker.png';
 import hdd from '../Assets/Images/Accessories/pcAccesories/hdd.png';
@@ -82,124 +81,148 @@ import recovery from '../Assets/Images/Logo/Laptop/recovery.png';
 import touchpad from '../Assets/Images/Logo/Laptop/touchpad.png';
 
 
+export const device = {
+    phone: {
+        apple: ['iPhone 6', 'iPhone 6 Plus','iPhone 6s', 'iPhone 6s Plus', 'iPhone 7', 'iPhone 7 Plus', 'iPhone SE', 'iPhone 8', 'iPhone 8 Plus', 'iPhone X'
+                , 'iPhone XS', 'iPhone XS Max', 'iPhone XR', 'iPhone 11', 'iPhone 11 Pro', 'iPhone 11 Pro Max', 'iPhone 12', 'iPhone 12 mini', 'iPhone 12 Pro',
+                    'iPhone 12 Pro Max', 'iPhone 13', 'iPhone 13 Mini', 'iPhone 13 Pro', 'iPhone 13 Pro Max', 'iPhone 14', 'iPhone 14 Plus', 'iPhone 14 Pro', 'iPhone 14 Pro Max'],
+    
+        samsung: ['Galaxy Note Series', 'Galaxy S Series', 'Galaxy A Series', 'Galaxy J Series', 'Galaxy Tab Series', 'Others'],
+        
+        htc: ['HTC 10', 'HTC One M9', 'HTC U11', 'HTC U12', 'Others'],
+        
+        sony: ['Sony Xperia XZ', 'Sony Xperia XZ Premium', 'Somy Xperia XA', 'Sony Xperia X Compact',
+                'Sony Xperia X', 'Sony Xperia Z5 Premium', 'Sony Xperia Z5 Compact', 'Sony Xperia Z3 Plus/Z4',
+                  'Sony Xperia Z5', 'Sony Xperia Z3 Compact', 'Sony Xperia Z3', 'Sony Xperia Z2', 'Sony Xperia Z1 Compact',
+                'Sony Xperia 10 Plus', 'Sony Xperia 10', 'Sony Xperia XZ2', 'Sony Xperia XZ3', 'Sony Xperia XA1 Ultra',
+                'Sony Xperia XZ1', 'Sony Xperia XZ1 Compact', 'Others'],
+        
+        lg: ['LG G5', 'LG K8(2016)', 'LG V30', 'LG V40', 'LG G4', 'LG G3', 'LG Nexus 5X', 'Others'],
+        
+        nexus: ['LG Huawei P20', 'Huawei P30 lite', 'Huawei P40 lite', 'LG Nexus 5X', 'Others'],
+        
+        nokia: ['Microsoft Nokia Lumia 1520', 'Microsoft Nokia Lumia 1320', 'Nokia 8', 'Nokia 6.1', 'Others'],
+        
+        blackberry: ['Blackberry DTEK 60', 'Blackberry Key One', 'Blackberry Key Two', 'Blackberry DTEK 50', 'Blackberry Playbook', 'Others'],
+        
+        pixel: ['Google Pixel 2', 'Google Pixel 2 XL', 'Google Pixel 3', 'Google Pixel 3 XL', 'Google Pixel 3A',
+                'Google Pixel 3A XL', 'Google Pixel 4', 'Google Pixel 4 XL', 'Google Pixel 4A', 'Google Pixel 5', 'Google Pixel XL', 'Others'],
+        
+        huawei: ['Huawei P20 Lite', 'Huawei P20 Pro', 'Huawei P30', 'Huawei P30 Pro', 'Huawei P40 5G', 'Huawei Honor 10',
+                'Huawei Honor 9', 'Huawei Honor 9 Lite', 'Huawei P Smart', 'Huawei P Smart 2019', 'Huawei P Smart 2020',
+                'Huawei P10', 'Huawei P9 Plus', 'Huawei P9 Lite', 'Huawei P9', 'Huawei Y6', 'Huawei Y7',
+                'Huawei P8 Lite', 'Huawei P8 Lite(2017)', 'Huawei P20', 'Huawei P30 lite', 'Huawei P40 lite',
+                'Huawei Honor 20 Lite', 'Huawei Honor 8', 'Huawei Honor 7', 'Huawei Honor 8X', 'Huawei Mate 20 Lite',
+                'Huawei Mate 10 Pro', 'Huawei Mate 20', 'Huawei Mate 20 Pro', 'Others'],
+        
+        oneplus: ['OnePlus 5', 'OnePlus 5T', 'OnePlus 6', 'OnePlus 6T', 'OnePlus 7 Pro', 'OnePlus 7T',
+                'OnePlus 8Pro', 'OnePlus 8T', 'OnePlus 3T', 'OnePlus 3', 'OnePlus 7', 'Others'],
+    
+        asus: ['ROG Phone 5s Pro', 'ROG Phone 5s', 'Zenfone 8 Flip', 'Zenfone 8', 'Zenfone 7 Pro', 'Zenfone 7',
+                'Zenfone 6', 'Zenfone Live', 'Zenfone Max Plus', 'Zenfone Max Shot', 'Zenfone Max',
+                'Zenfone Lite', 'ROG Phone ZS600KL', 'Zenfone 5z', 'Zenfone 5', 'Zenfone 4', 'Zenfone 4 Pro', 'Zenfone 4 Selfie',
+                'Zenfone 4 Max', 'Zenfone 4 Max Pro', 'Others']
 
-export const phone = {
-    apple: ['iPhone 6', 'iPhone 6 Plus','iPhone 6s', 'iPhone 6s Plus', 'iPhone 7', 'iPhone 7 Plus', 'iPhone SE', 'iPhone 8', 'iPhone 8 Plus', 'iPhone X'
-            , 'iPhone XS', 'iPhone XS Max', 'iPhone XR', 'iPhone 11', 'iPhone 11 Pro', 'iPhone 11 Pro Max', 'iPhone 12', 'iPhone 12 mini', 'iPhone 12 Pro',
-                'iPhone 12 Pro Max', 'iPhone 13', 'iPhone 13 Mini', 'iPhone 13 Pro', 'iPhone 13 Pro Max'],
-
-    samsung: ['Galaxy Note Series', 'Galaxy S Series', 'Galaxy A Series', 'Galaxy J Series', 'Galaxy Tab Series'],
-    
-    htc: ['HTC 10', 'HTC One M9', 'HTC U11', 'HTC U12'],
-    
-    sony: ['Sony Xperia XZ', 'Sony Xperia XZ Premium', 'Somy Xperia XA', 'Sony Xperia X Compact',
-            'Sony Xperia X', 'Sony Xperia Z5 Premium', 'Sony Xperia Z5 Compact', 'Sony Xperia Z3 Plus/Z4',
-              'Sony Xperia Z5', 'Sony Xperia Z3 Compact', 'Sony Xperia Z3', 'Sony Xperia Z2', 'Sony Xperia Z1 Compact',
-            'Sony Xperia 10 Plus', 'Sony Xperia 10', 'Sony Xperia XZ2', 'Sony Xperia XZ3', 'Sony Xperia XA1 Ultra',
-            'Sony Xperia XZ1', 'Sony Xperia XZ1 Compact'],
-    
-    lg: ['LG G5', 'LG K8(2016)', 'LG V30', 'LG V40', 'LG G4', 'LG G3', 'LG Nexus 5X'],
-    
-    nexus: ['LG Huawei P20', 'Huawei P30 lite', 'Huawei P40 lite', 'LG Nexus 5X'],
-    
-    nokia: ['Microsoft Nokia Lumia 1520', 'Microsoft Nokia Lumia 1320', 'Nokia 8', 'Nokia 6.1'],
-    
-    blackberry: ['Blackberry DTEK 60', 'Blackberry Key One', 'Blackberry Key Two', 'Blackberry DTEK 50', 'Blackberry Playbook'],
-    
-    pixel: ['Google Pixel 2', 'Google Pixel 2 XL', 'Google Pixel 3', 'Google Pixel 3 XL', 'Google Pixel 3A',
-            'Google Pixel 3A XL', 'Google Pixel 4', 'Google Pixel 4 XL', 'Google Pixel 4A', 'Google Pixel 5', 'Google Pixel XL'],
-    
-    huawei: ['Huawei P20 Lite', 'Huawei P20 Pro', 'Huawei P30', 'Huawei P30 Pro', 'Huawei P40 5G', 'Huawei Honor 10',
-            'Huawei Honor 9', 'Huawei Honor 9 Lite', 'Huawei P Smart', 'Huawei P Smart 2019', 'Huawei P Smart 2020',
-            'Huawei P10', 'Huawei P9 Plus', 'Huawei P9 Lite', 'Huawei P9', 'Huawei Y6', 'Huawei Y7',
-            'Huawei P8 Lite', 'Huawei P8 Lite(2017)', 'Huawei P20', 'Huawei P30 lite', 'Huawei P40 lite',
-            'Huawei Honor 20 Lite', 'Huawei Honor 8', 'Huawei Honor 7', 'Huawei Honor 8X', 'Huawei Mate 20 Lite',
-            'Huawei Mate 10 Pro', 'Huawei Mate 20', 'Huawei Mate 20 Pro'],
-    
-    oneplus: ['OnePlus 5', 'OnePlus 5T', 'OnePlus 6', 'OnePlus 6T', 'OnePlus 7 Pro', 'OnePlus 7T',
-            'OnePlus 8Pro', 'OnePlus 8T', 'OnePlus 3T', 'OnePlus 3', 'OnePlus 7'],
-
-    asus: ['ROG Phone 5s Pro', 'ROG Phone 5s', 'Zenfone 8 Flip', 'Zenfone 8', 'Zenfone 7 Pro', 'Zenfone 7',
-            'Zenfone 6', 'Zenfone Live', 'Zenfone Max Plus', 'Zenfone Max Shot', 'Zenfone Max',
-            'Zenfone Lite', 'ROG Phone ZS600KL', 'Zenfone 5z', 'Zenfone 5', 'Zenfone 4', 'Zenfone 4 Pro', 'Zenfone 4 Selfie',
-            'Zenfone 4 Max', 'Zenfone 4 Max Pro']
-}
-
-export const tablet = {
-    apple: ['Apple iPad Mini 2019', 'Apple iPad Pro 12.9"', 'Apple iPad 2018', 'Apple iPad Pro 10.5',
+    },
+    tablet: {
+        apple: ['Apple iPad Mini 2019', 'Apple iPad Pro 12.9"', 'Apple iPad 2018', 'Apple iPad Pro 10.5',
           'Apple iPad Pro 9.7', 'Apple iPad Pro', 'Apple iPad Mini 4', 'Apple iPad Mini 3', 'Apple iPad Air 2',
           'Apple iPad Mini 2013', 'Apple iPad Air', 'Apple iPad Mini', 'Apple iPad 4', 'Apple iPad 3',
-          'Apple iPad 2'],
-    samsung: ['SAMSUNG Galaxy Tab S7', 'Samsung Galaxy Tab S7+', 'Samsung Galaxy Tab S7 FE', 
-              'Samsung Galaxy Tab S6 Lite', 'Samsung Galaxy Tab A7', 'Samsung Tab A7 Lite',
-              'SAMSUNG Galaxy Tab A'],
-    amazon: ['Amazon Fire HD 8 (2018)', 'Amazon Fire HD 10 (2017)', 'Amazon Fire 7 (2017)', 'Amazon Fire HD 8 (2017)',
-            'Amazon Fire HD 8 (2016)', 'Amazon Fire Kids Edition', 'Amazon Fire HD 8', 'Amazon Fire HD 10',
-            'Amazon Fire 7" (2015)', 'Amazon Fire HD Kids 7"', 'Amazon Kindle Fire HDX 8.9"', 'Amazon Kindle Fire HDX 7"'],
-    lenovo: ['Lenovo E7', 'Lenovo E8', 'Lenovo E10', 'Lenovo M10', 'Lenovo P10', 'Lenovo Miix 630',
-            'Lenovo Thinkpad X1', 'Lenovo Tab 7', 'Lenovo Yoga A12'],
-    huawei: ['Huawei MediaPad M5 Pro', 'Huawei MediaPad M5 8.4 Tablet', 'Huawei MediaPad M5 Lite', 
-            'Huawei MediaPad T3 10', 'Huawei MediaPad T3 8'],
-    microsoft: ['Microsoft Surface Pro 6', 'Microsoft Surface Go', 'Microsoft Surface Book 2',
-              'Microsoft Surface Pro (2017)', 'Microsoft Surface Pro 4', 'Microsoft Surface 3',
-              'Microsoft Surface Pro 3', 'Microsoft Surface 2', 'Microsoft Surface Pro 2', 'Microsoft Surface Pro', 'Microsoft Surface RT'],
-    asus: ['Asus ZenPad C 7.0', 'Asus ZenPad S 8.0', 'Asus Zenpad 10', 'Asus Transformer Book T100 Chi', 'Asus Transf. Book T300 Chi',
-          'Asus Transformer Book T90 Chi', 'ASUS Transformer Pad TF103C', 'ASUS Transformer Pad TF103'],
-    google: ['Google Pixel Slate', 'Google Pixel C', 'Google/HTC Nexus 9', 'Google/Asus Nexus 7 II',
-            'Google/Samsung Nexus 10', 'Google/Asus Nexus 7 II']
-}
-
-export const accessories = {
-    phone: {
-      charger: 'Charger',
-      cover: 'Cover',
-      headphone: 'Headphone',
-      screen: 'Screen',
-      wireless: 'Wireless Charger',
-      powerBank: 'Power Bank'
+          'Apple iPad 2', 'Others'],
+        samsung: ['SAMSUNG Galaxy Tab S7', 'Samsung Galaxy Tab S7+', 'Samsung Galaxy Tab S7 FE', 
+                'Samsung Galaxy Tab S6 Lite', 'Samsung Galaxy Tab A7', 'Samsung Tab A7 Lite',
+                'SAMSUNG Galaxy Tab A', 'Others'],
+        amazon: ['Amazon Fire HD 8 (2018)', 'Amazon Fire HD 10 (2017)', 'Amazon Fire 7 (2017)', 'Amazon Fire HD 8 (2017)',
+                'Amazon Fire HD 8 (2016)', 'Amazon Fire Kids Edition', 'Amazon Fire HD 8', 'Amazon Fire HD 10',
+                'Amazon Fire 7" (2015)', 'Amazon Fire HD Kids 7"', 'Amazon Kindle Fire HDX 8.9"', 'Amazon Kindle Fire HDX 7"', 'Others'],
+        lenovo: ['Lenovo E7', 'Lenovo E8', 'Lenovo E10', 'Lenovo M10', 'Lenovo P10', 'Lenovo Miix 630',
+                'Lenovo Thinkpad X1', 'Lenovo Tab 7', 'Lenovo Yoga A12', 'Others'],
+        huawei: ['Huawei MediaPad M5 Pro', 'Huawei MediaPad M5 8.4 Tablet', 'Huawei MediaPad M5 Lite', 
+                'Huawei MediaPad T3 10', 'Huawei MediaPad T3 8', 'Others'],
+        microsoft: ['Microsoft Surface Pro 6', 'Microsoft Surface Go', 'Microsoft Surface Book 2',
+                'Microsoft Surface Pro (2017)', 'Microsoft Surface Pro 4', 'Microsoft Surface 3',
+                'Microsoft Surface Pro 3', 'Microsoft Surface 2', 'Microsoft Surface Pro 2', 'Microsoft Surface Pro', 'Microsoft Surface RT', 'Others'],
+        asus: ['Asus ZenPad C 7.0', 'Asus ZenPad S 8.0', 'Asus Zenpad 10', 'Asus Transformer Book T100 Chi', 'Asus Transf. Book T300 Chi',
+            'Asus Transformer Book T90 Chi', 'ASUS Transformer Pad TF103C', 'ASUS Transformer Pad TF103', 'Others'],
+        google: ['Google Pixel Slate', 'Google Pixel C', 'Google Nexus 9', 'Google Nexus 7 II',
+                'Google Nexus 10', 'Google Nexus 7 II', 'Others']
     },
-
-    phoneImg: {
-      charger: charger,
-      cover: cover,
-      headphone: headphone,
-      screen: screen,
-      wireless: wireless,
-      powerBank: powerBank
-    },
-
-    tablet: {
-      cover: 'Cover',
-      keyboard: 'Keyboard',
-      screenProtector: 'Screen Protector',
-      speaker: 'Speaker',
-      stand: 'Tablet Stand',
-      headphone: 'Headphone'
-    },
-
-    tabletImg: {
-      cover: tabletCover,
-      keyboard: btKeyboard,
-      screenProtector: protector,
-      speaker: btSpeaker,
-      stand: stand,
-      headphone: headphone
+    laptop: {apple: ['MacBook Pro (15-inch, Early 2008)', 'MacBook Pro (17-inch, Early 2008)', 'MacBook Pro (15-inch, Late 2008)', 'MacBook Pro (17-inch, Early 2009)',
+                    'MacBook Pro (13-inch, Mid 2009)', 'MacBook Pro (15-inch, 2.53 GHz, Mid 2009)', 'MacBook Pro (15-inch, Mid 2009)', 'MacBook Pro (17-inch, Mid 2009)',
+                    'MacBook Pro (13-inch, Mid 2010)', 'MacBook Pro (15-inch, Mid 2010)', 'MacBook Pro (15-inch, Early 2011)', 'MacBook Pro (13-inch, Mid 2012)', 'MacBook Pro (Retina, 13-inch, Early 2013)',
+                    'MacBook Pro (Retina, 13-inch, Late 2013)', 'MacBook Pro (13-inch, M2, 2022)', 'MacBook Pro (14-inch, 2021)', 'MacBook Pro (16-inch, 2021)', 'MacBook Pro (13-inch, M1, 2020)', 'Others'],
+             acer: ['Aspire One', 'Aspire P3', 'Aspire R 11', 'Aspire R 14', 'Aspire R7', 'Aspire R 15', 'Acer Chromebook C933T', 'Acer Swift 3x', 'Acer Predator Triton 300 SE', 'Others'],
+             dell: ['Dell Latitude 3000', 'Dell Latitude 5000', 'Dell Latitude 7000', 'Dell Vostro 3000', 'Dell Vostro 5000', 'Dell Inspiron 3000', 'Dell Precision 3000', 'Dell XPS 13', 'Dell XPS 15', 'Dell Alienware m15', 'Others'],
+             hp: ['Hp ZBook G8', 'HP 250 G8', 'HP Probook 430 G7', 'HP 15s-fq5111TU', 'HP 14s-dy5005TU', 'HP Pavilion 15-ec2004AX', 'HP Victus 16-e0351AX (552X1PA)', 'HP 15s-FR2511TU (6N049PA)', 'HP 247 G8 (6B5R3PA)', 'Others'],
+             samsung: ['Series 2 NP200B5A-A01US', 'Series 3 NP300E5A-A03US', 'Series 4 NP400B2B-A01US', 'Series 5 Chromebook', 'Series 5 NP530U3B-A01US', 'Series 6 NP600B4B-A01US', 'Series 7 NP700G7C-S01UK', 'Series 9 NP900X3A-B0BUS Ultrabook', 'Others'],
+             sony: ['Vaio E Series VPCEH34FX', 'Vaio EJ Series VPCEJ22FX', 'Vaio F series VPCF112FX', 'Vaio S Series VPCSE1CGX', 'Vaio SA Series VPCSA4MFY', 'Vaio W Series VPCW217AG', 'Vaio X Series VPCX135KX', 'Vaio YB Series VPCYB13KX', 'Others']
     }
 }
 
-export const phoneLogo = {
-    apple: apple,
-    asus: asus,
-    blackberry: blackberry,
-    htc: htc, 
-    huawei: huawei, 
-    lg: lg, 
-    nexus: nexus, 
-    nokia: nokia, 
-    oneplus: oneplus, 
-    pixel: pixel, 
-    samsung: samsung, 
-    sony: sony
+
+export const accessories = {
+    phone: {
+      charger: {title: 'Charger', img: charger},
+      cover: {title: 'Cover', img: cover},
+      headphone: {title: 'Headphone', img: headphone},
+      screen: {title: 'Screen', img: screen},
+      wirelesscharger: {title: 'Wireless Charger', img: wireless},
+      powerbank: {title: 'Power Bank', img: powerBank}
+    },
+
+    tablet: {
+      cover: {title: 'Cover', img: tabletCover},
+      keyboard: {title: 'Keyboard', img: btKeyboard},
+      screenprotector: {title: 'Screen Protector', img: protector},
+      speaker: {title: 'Speaker', img: btSpeaker},
+      tablestand: {title: 'Table stand', img: stand},
+      headphone: {title: 'Headphone', img: headphone},
+    },
+    
+    laptop: {
+        keyboard: {title: 'Keyboard', img: keyboard},
+        harddrive: {title: 'Hard Drive', img: hdd},
+        monitor: {title: 'Monitor', img: monitor},
+        mouse: {title: 'Mouse', img: mouse},
+        charger: {title: 'Charger', img: laptopCharger},
+        ram: {title: 'Ram', img: ram},
+        speaker: {title: 'Speaker', img: speaker}
+    }
+}
+
+export const logo = {
+    phone: {
+        apple: apple,
+        asus: asus,
+        blackberry: blackberry,
+        htc: htc, 
+        huawei: huawei, 
+        lg: lg, 
+        nexus: nexus, 
+        nokia: nokia, 
+        oneplus: oneplus, 
+        pixel: pixel, 
+        samsung: samsung, 
+        sony: sony
+    },
+    tablet: {
+        amazon: amazonTab,
+        asus: asusTab,
+        google: googleTab,
+        huawei: huaweiTab,
+        apple: ipadpro,
+        lenovo: lenovoTab,
+        microsoft: microsoftTab,
+        samsung: samsungTab
+    },
+    laptop: {
+        apple: macbook,
+        acer: acer,
+        dell: dell,
+        hp: hp,
+        samsung: samsungLaptop,
+        sony: sonylaptop
+    }
 }
 
 export const phonePic = {
@@ -217,16 +240,6 @@ export const phonePic = {
     sony: Sony
 }
 
-export const tabletPic = {
-    amazon: amazonTab,
-    asus: asusTab,
-    google: googleTab,
-    huawei: huaweiTab,
-    apple: ipadpro,
-    lenovo: lenovoTab,
-    microsoft: microsoftTab,
-    samsung: samsungTab
-}
 
 export const laptop = {
 
@@ -237,19 +250,6 @@ export const laptop = {
       powerIssue: 'Charging Issue',
       dataRecovery: 'Data Recovery',
       touchpad: 'Touchpad Repair'
-    },
-
-    brand: {
-      apple: 'Apple', acer: 'Acer', dell: 'Dell', hp: 'Hp', samsung: 'Samsung', sony: 'Sony'
-    },
-
-    logo: {
-      apple: macbook,
-      acer: acer,
-      dell: dell,
-      hp: hp,
-      samsung: samsungLaptop,
-      sony: sonylaptop
     },
 
     laptopPic: {
@@ -273,25 +273,6 @@ export const laptopAccessoriesImg = {
     ssd: ssd
 }
 
-export const pcCategory = {
-    keyboard: 'Keyboard',
-    hdd: 'Hard Disk',
-    monitor: 'Monitor',
-    mouse: 'Mouse',
-    utilities: 'Utilities',
-    ram: 'Ram',
-    speaker: 'Bluetooth Speaker'
-}
-
-export const pcImage = {
-    keyboard: Keyboard,
-    hdd: hdd,
-    monitor: monitor,
-    mouse: mouse,
-    utilities: utilities,
-    ram: ram,
-    speaker: speaker
-}
 
 export const inquiryFormDetails = {
     phonerepair: {

@@ -25,7 +25,6 @@ class HomePage extends Component {
                 <HeaderIntro1 />
     
                 <div className={styles.BannerMain}>
-    
                     <div className={styles.Banner}>
                         <img src={pic1} alt="pic1"/>
                         <div className={styles.Subbanner}>
@@ -49,6 +48,10 @@ class HomePage extends Component {
                             <p>All Kinds of Laptop and Smartphone Accessories</p>
                         </div>
                     </div>
+                </div>
+                
+                <div id="service">
+                    <ServiceMain serviceMain={this.props.service}/>
                 </div>
     
                 <div className={styles.HeadingMain}>
@@ -76,9 +79,6 @@ class HomePage extends Component {
                     </div>
                 </div>
     
-                <div id="service">
-                    <ServiceMain serviceMain={this.props.service}/>
-                </div>
 
                 <div>
                     <HeaderIntro2 />

@@ -4,7 +4,8 @@
 .Main {
     width: 100%;
     margin: auto;
-    background-color: #334257;
+    /* background-color: #334257; */
+    background-color: #333334;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -114,8 +115,6 @@
     font-size: 21px;
     color: #EEEEEE;
 }
-
-
 
 .socialLinkList {
     list-style: none;

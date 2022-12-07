@@ -9,7 +9,7 @@ import aos from 'aos';
 import 'aos/dist/aos.css';
 import Modal from '../../../Extra/Modal/Modal';
 import GetAquote from '../../../Extra/GetAqoute/GetAquote';
-import { phonePic, accessories, tabletPic, laptop, pcImage, inquiryFormDetails } from '../../../data/data';
+import { phonePic, accessories, logo, inquiryFormDetails } from '../../../data/data';
 import SubmitInquiry from '../submitInquiry/submitInquiry';
 import { useParams } from 'react-router-dom';
 
@@ -32,14 +32,23 @@ const InquiryForm = () => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
 
+    console.log(params);
+
     useEffect(() => {
         window.scrollTo(0, 0);
         aos.init({duration: 1200});
+
+        if (params.itemId && params.model){
+            setMake(params.itemId);
+            setModel(params.model)
+        }
         
         if (window.location.pathname === '/inquiry') {
             document.getElementById('inquiry').scrollIntoView();
         }
     }, [])
+
+    console.log(make, model);
 
     useEffect(() => {
         if (make.length > 0 && model.length > 0 && description.length > 0 && service.length > 0 && name.length > 0 && phone.length > 0){
@@ -99,40 +108,42 @@ const InquiryForm = () => {
 
     let queryId = params.queryId ? params.queryId : 'repair';
     let deviceId = params.deviceId ? params.deviceId : 'phone';
-    let itemId = params.itemId ? params.itemId : 'apple';
+    let itemId = params.itemId ? params.itemId.toLowerCase().split(' ').join('') : 'apple';
     let mainItem = params.deviceId ? deviceId.concat(queryId) : 'phonerepair';
+    const productId = params.productId ? params.productId.toLowerCase().split(' ').join('') : null;
     
     let details = inquiryFormDetails[mainItem]['details'];
     let img = null;
     let formImage = null;
+    console.log(productId)
     
     if (queryId === 'accessories' && deviceId === 'phone') {
-        img = <img src={accessories.phoneImg[itemId]} alt="device"/>
-        formImage = accessories.phoneImg[itemId];
+        img = <img src={accessories.phone[productId].img} alt="device"/>
+        formImage = accessories.phone[productId].img;
     }
     else if (deviceId === 'phone') {
         img = <img src={phonePic[itemId]} alt="device"/>
-        formImage = phonePic[itemId]
+        formImage = phonePic[itemId.toLowerCase()]
     }
     else if (queryId === 'accessories' && deviceId === 'tablet') {
-        img = <img src={accessories.tabletImg[itemId]} alt="device"/>
-        formImage = accessories.tabletImg[itemId]
+        img = <img src={accessories.tablet[productId].img} alt="device"/>;
+        formImage = accessories.tablet[productId].img;
     }
     else if (deviceId === 'tablet') {
-        img = <img src={tabletPic[itemId]} alt="device"/>
-        formImage = tabletPic[itemId]
+        img = <img src={logo.tablet[itemId]} alt="device"/>
+        formImage = logo.tablet[itemId]
     }
     else if (queryId === 'sale' && deviceId === 'laptop') {
-        img = <img src={laptop.logo[itemId]} alt="device"/>
-        formImage = laptop.logo[itemId]
+        img = <img src={logo.laptop[itemId]} alt="device"/>
+        formImage = logo.laptop[itemId]
     }
     else if (queryId === 'repair' && deviceId === 'laptop') {
-        img = <img src={laptop.laptopPic[itemId]} alt="device"/>
-        formImage = laptop.laptopPic[itemId]
+        img = <img src={logo.laptop[itemId]} alt="device"/>
+        formImage = logo.laptop[itemId]
     }
     else if (queryId === 'accessories' && deviceId === 'laptop') {
-        img = <img src={pcImage[itemId]} alt="device"/>
-        formImage = pcImage[itemId]
+        img = <img src={accessories.laptop[productId].img} alt="device"/>
+        formImage = accessories.laptop[productId].img
     }
 
     let div1  = <div className={styles.Img}> 
@@ -263,6 +274,8 @@ const InquiryForm = () => {
                             userInputHandler={inputHandler}
                             submitQuery={queryId === 'sale' ? saleQuery : repairQuery}
                             submitBtnDisable={btnDisable}
+                            makeValue={make}
+                            modelValue={model}
                             />
                             
             {div2}
