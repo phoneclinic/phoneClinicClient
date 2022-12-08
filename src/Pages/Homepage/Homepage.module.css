@@ -70,6 +70,71 @@
     padding: 10px 0;
 }
 
+.galleryContainer {
+    width: 100%;
+    margin: 105px auto;
+    color: #3a7ed9;
+}
+
+.galleryIndex {
+    /* width:100%; */
+    margin: 35px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galleryImgBody {
+    width: 15%;
+    margin: 10px;
+}
+
+.galleryImg {
+    width: 95%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.galleryImgDisplayMain {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galleryImgDisplay {
+    width: 97%;
+    height:500px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.handlerBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: grey;
+}
+
+
+.handlerBtn:hover {
+    background-color: white;
+    color: #3a7ed9;
+}
+
+.handlerBtn:disabled {
+    color: lightgray;
+    cursor: auto;
+}
+
+.arrows {
+    font-size: 25px;
+    color: inherit;
+}
+
 @media (max-width: 767px) {
     .HeadingMain {
         height: auto;
@@ -110,5 +175,21 @@
 @media (max-width: 1134px){
     .BannerMain {
         justify-content: center;
+    }
+}
+
+@media (max-width:650px) {
+    .galleryImgDisplayMain {
+        width: 100%;
+    }
+
+    .galleryImgBody {
+        width: 25%;
+        margin: 5px;
+    }
+
+    .galleryImg {
+        width: 100%;
+        height: 90px;
     }
 }
