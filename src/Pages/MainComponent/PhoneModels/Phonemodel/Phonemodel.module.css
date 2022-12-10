@@ -39,6 +39,7 @@
 
 .Main p {
     color: #3E3636;
+    cursor: pointer;
 }
 
 @media (max-width:799px) {

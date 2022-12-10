@@ -28,7 +28,7 @@ const HomePage = (props) => {
 
     const [currentSet, setCurrentSet] = useState(0);
 
-    const [windowSize, setWindowSize] = useState(null);
+    const [windowSize, setWindowSize] = useState(window.screen.width);
 
     const [itemPerSet, setItemPerSet] = useState(4);
 
@@ -37,15 +37,21 @@ const HomePage = (props) => {
             document.getElementById('service').scrollIntoView();
         }
         function resize() {
-            setWindowSize(window.innerWidth)
+            setWindowSize(window.screen.width);
         }
 
-        window.addEventListener('resize', resize)
+        window.addEventListener('resize', resize);
+
+        return () => {
+            window.removeEventListener('resize', resize)
+        }
     }, [])
 
     useEffect(() => {
+        console.log(windowSize);
         windowSize <= 650 ? setItemPerSet(3) : setItemPerSet(4)
     }, [windowSize])
+
     
     let galleryImgDisplay = <img src={selectedImg} alt="phone clinic" className={styles.galleryImgDisplay} />
     

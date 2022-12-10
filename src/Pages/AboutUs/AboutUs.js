@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import styles from './AboutUs.module.css';
 import aboutUsImage from '../../Assets/Images/others/aboutUs.jpg';
 import call from '../../Assets/Images/others/dial.png';
@@ -10,6 +9,7 @@ import laptop from '../../Assets/Images/shop/laptop/laptopLogo/hp.png';
 import money from '../../Assets/Images/others/moneyTransfers.png';
 import exchange from '../../Assets/Images/others/exchange.png';
 import accessories from '../../Assets/Images/others/accessories.png';
+import ReactWhatsapp from 'react-whatsapp';
 
 
 const AboutUs = () => {
@@ -113,23 +113,25 @@ const AboutUs = () => {
 
                     <div className={styles.Contacts}>
                         <div className={styles.Contact}>
-                            <a href='tel: 02072372324' className={styles.contactsLink}>
-                                    <img src={call} alt="call"/>
-                                    <div>
-                                        <h3>By Phone</h3>
-                                        <p>020 7237 2724</p>
-                                    </div>
-                            </a>
+                            <img src={call} />
+                            <h2>By Phone</h2>
+                            <div className={styles.contactNumbers}>
+                                <a href='tel: +442072372724' className={styles.contactNumber}>020 7237 2724</a>
+                                <a href='tel: +442079283728' className={styles.contactNumber}>020 7928 3728</a>
+                                <a href='tel: +447770070327' className={styles.contactNumber}>07770 070327</a>
+                                <a href='tel: +447484 369049' className={styles.contactNumber}>07484 369049</a>
+                            </div>
                         </div>
 
                         <div className={styles.Contact}>
-                            <Link to="/inquiry" className={styles.contactsLink}>
-                                <img src={email} alt="email"/>
-                                <div>
-                                    <h3>By Email</h3>
-                                    <p>phoneclinic@gmail.com</p>
-                                </div>
-                            </Link>
+                            <img src={email}/>
+                            <h2>Others</h2>
+                            <div className={styles.otherContacts}>
+                                <p>Whatsapp: </p><ReactWhatsapp number="+447516345999" message="Hello phone clinic..." className={styles.whatsappBtn}>
+                                +44 7516 345999
+                                </ReactWhatsapp>
+                                <p>Email: phoneclinicse1@gmail.com</p>
+                            </div>
                         </div>
                     </div>
                 </div>

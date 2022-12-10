@@ -3,6 +3,8 @@ import { faFacebook, faYoutube, faInstagram, faTwitter } from '@fortawesome/free
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
+import ReactWhatsapp from 'react-whatsapp';
 import styles from './FooterMain.module.css';
 
 const FooterMain = () => {
@@ -12,19 +14,37 @@ const FooterMain = () => {
         <div className={styles.Main}>
             <div className={styles.socialLinkMain}>
                 <h2 className={styles.socialLinkHeader}>Phone Clinic</h2>
-                <p className={styles.socialLinkPara}>Follow Us</p>
+                <div className={styles.contactLinks}>
+                    <div className={styles.contactLink}>
+                        <p style={{margin: '5px'}}>271 Old kent road, SE15LU</p>
+                        <div className={styles.contactNumbers}>
+                            <a href='tel:+442072372724' className={styles.contactNumber}>020 7237 2724</a>
+                            <a href='tel:+447770070327' className={styles.contactNumber}>07770 070327</a>
+                        </div>
+                    </div>
+
+                    <div className={styles.contactLink}>
+                        <p style={{margin: '5px'}}>231 Waterloo road, SE1 8XH</p>
+                        <div className={styles.contactNumbers}>
+                            <a href='tel:+442079283728' className={styles.contactNumber}>020 7928 3728</a>
+                            <a href='tel:+447484369049' className={styles.contactNumber}>07484 369049</a>
+                        </div>
+                    </div>
+                </div>
                 <ul className={styles.socialLinkLists}>
                     <li className={styles.socialLinkList}>
                         <Link to='' className={styles.socialLinkLinks}><FontAwesomeIcon id={styles.fb} style={{height: '35px', width: '35px'}} icon={faFacebook}/></Link>
+                    </li>
+                    <li className={styles.socialLinkList}>
+                        <ReactWhatsapp number="+447516345999" message="Hello phone clinic..." className={styles.whatsappBtn}>
+                            <FontAwesomeIcon icon={faWhatsappSquare} className={styles.whatsappIcon}/>
+                        </ReactWhatsapp>
                     </li>
                     <li className={styles.socialLinkList}>
                         <Link to='' className={styles.socialLinkLinks}><FontAwesomeIcon id={styles.yt} style={{height: '35px', width: '35px'}} icon={faYoutube}/></Link>
                     </li>
                     <li className={styles.socialLinkList}>
                         <Link to='' className={styles.socialLinkLinks}><FontAwesomeIcon id={styles.in} style={{height: '35px', width: '35px'}} icon={faInstagram}/></Link>
-                    </li>
-                    <li className={styles.socialLinkList}>
-                        <Link to='' className={styles.socialLinkLinks}><FontAwesomeIcon id={styles.tw} style={{height: '35px', width: '35px'}} icon={faTwitter}/></Link>
                     </li>
                 </ul>
             </div>

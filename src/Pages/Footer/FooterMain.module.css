@@ -138,8 +138,26 @@
     color: #c4302b;
 }
 
-#tw:hover {
-    color: #00acee
+.whatsappBtn {
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.whatsappBtn:hover {
+    background-color: transparent;
+}
+
+.whatsappIcon {
+    font-size: 35px;
+    color: #EEEEEE;
+}
+
+.whatsappIcon:hover {
+    color: white;
+    background-color: #075e54;
 }
 
 .quickLinkMain {
@@ -179,6 +197,28 @@
 }
 
 .quickLinkList:hover {
+    color: white;
+}
+
+.contactLinks {
+    width: 100%;
+    margin: 10px auto;
+    color: white;
+}
+
+.contactNumbers {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactNumber {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.contactNumber:hover {
     color: white;
 }
 

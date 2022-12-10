@@ -1,7 +1,7 @@
 import React from'react';
 import { Link } from 'react-router-dom';
 import styles from './Logo.module.css';
-import logo from '../../Assets/Images/others/logo.png';
+import logo from '../../Assets/Images/logo.png';
 
 const Logo = () => {
 
