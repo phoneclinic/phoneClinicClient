@@ -93,7 +93,7 @@
 
 .galleryImg {
     width: 95%;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -109,7 +109,7 @@
     width: 97%;
     height:500px;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .handlerBtn {
